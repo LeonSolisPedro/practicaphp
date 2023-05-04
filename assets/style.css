@@ -19,5 +19,10 @@
     width: 100%;
     margin-top: 116px;
     margin-left: 70px;
+    margin-right: 70px;
   }
+}
+
+.resize-none {
+  resize: none;
 }

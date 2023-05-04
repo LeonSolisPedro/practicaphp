@@ -7,6 +7,20 @@ function obtenerProductos()
     return $sentencia->fetchAll();
 }
 
+function guardarProducto($nombre, $descripcion ,$precio)
+{
+    $bd = obtenerConexion();
+    $sentencia = $bd->prepare("INSERT INTO productos(nombre, descripcion, precio) VALUES(?, ?, ?)");
+    return $sentencia->execute([$nombre, $descripcion, $precio]);
+}
+
+function eliminarProducto($id)
+{
+    $bd = obtenerConexion();
+    $sentencia = $bd->prepare("DELETE FROM productos WHERE id = ?");
+    return $sentencia->execute([$id]);
+}
+
 function obtenerConexion()
 {
     $user = "root";

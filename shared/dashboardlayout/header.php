@@ -21,8 +21,6 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-link" href="/crudproductos">CRUD Productos</a>
-        <hr>
-        <a class="nav-link" href="/crudproductos">Cerrar Sesión</a>
         <a class="nav-link" href="/">Volver a la tienda</a>
       </div>
     </div>
