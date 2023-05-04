@@ -12,7 +12,7 @@ $productos = obtenerProductos();
         <a class="btn btn-primary" href="vista_agregar_producto.php">Agregar producto</a>
       </div>
     </div>
-    <div class="mt-4">
+    <div class="mt-4 table-responsive">
       <table class="table">
         <thead>
           <tr>

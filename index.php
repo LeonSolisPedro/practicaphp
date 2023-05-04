@@ -13,7 +13,7 @@ $productos = obtenerProductos();
   <?php foreach ($productos as $producto) { ?>
 
 
-    <div class="col-3">
+    <div class="col-xl-3">
       <div class="card">
         <div class="card-body">
           <h4 class="card-title mb-4"><?php echo $producto->nombre ?></h4>
