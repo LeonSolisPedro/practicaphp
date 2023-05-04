@@ -9,7 +9,7 @@ $productos = obtenerProductos();
     <div class="d-flex align-items-center justify-content-between">
       <h1 class="card-title">Productos</h1>
       <div>
-        <a class="btn btn-primary" href="agregar_producto.php">Agregar producto</a>
+        <a class="btn btn-primary" href="vista_agregar_producto.php">Agregar producto</a>
       </div>
     </div>
     <div class="mt-4">
@@ -19,7 +19,7 @@ $productos = obtenerProductos();
             <th>Nombre</th>
             <th>Descripción</th>
             <th>Precio</th>
-            <th>Eliminar</th>
+            <th>Acciones</th>
           </tr>
         </thead>
         <tbody>
@@ -31,9 +31,7 @@ $productos = obtenerProductos();
               <td>
                 <form action="eliminar_producto.php" method="post">
                   <input type="hidden" name="id_producto" value="<?php echo $producto->id ?>">
-                  <button class="btn btn-sm btn-danger">
-                    Eliminar
-                  </button>
+                  <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
                 </form>
               </td>
             <?php } ?>
