@@ -1,3 +1,23 @@
-body {
-  color: red;
+@media screen and (min-width:992px) {
+
+  #dashboardwrapper nav .container-fluid,
+  #dashboardwrapper nav .navbar-collapse,
+  #dashboardwrapper nav .navbar-nav {
+    flex-direction: column;
+  }
+
+  #dashboardwrapper nav {
+    width: 25%;
+    height: 100vh;
+  }
+
+  #dashboardwrapper {
+    display: flex;
+  }
+
+  #dashboardwrapper main {
+    width: 100%;
+    margin-top: 116px;
+    margin-left: 70px;
+  }
 }

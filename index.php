@@ -1,7 +1,5 @@
-<?php
+<?php include "shared/frontlayout/header.php" ?>
 
-include "shared/header.php"
+<h1>Productos</h1>
 
-?>
-
-<h1>Aqui van los productos</h1>
+<?php include "shared/frontlayout/footer.php" ?>
