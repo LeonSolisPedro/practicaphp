@@ -15,6 +15,7 @@ $productos = obtenerProductos();
 
     <div class="col-xl-3">
       <div class="card">
+       <img src="<?php echo $producto->portadaURL ?>" class="card-img-top">
         <div class="card-body">
           <h4 class="card-title mb-4"><?php echo $producto->nombre ?></h4>
           <p class="card-text"><?php echo $producto->descripcion ?></p>

@@ -33,6 +33,7 @@ $productos = obtenerProductos();
                   <input type="hidden" name="id_producto" value="<?php echo $producto->id ?>">
                   <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
                 </form>
+                <a href="vista_editar_producto.php?id=<?php echo $producto->id ?>" class="btn btn-sm btn-secondary">Editar</a>
               </td>
             <?php } ?>
             </tr>

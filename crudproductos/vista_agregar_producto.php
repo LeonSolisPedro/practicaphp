@@ -11,7 +11,11 @@
       </div>
     </div>
     <div class="mt-4">
-      <form id="form" action="agregar_producto.php" method="post">
+      <form id="form" action="agregar_producto.php" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+          <label class="mb-2">Imagen de portada</label>
+          <input type="file" name="fileToUpload" class="form-control">
+        </div>
         <div class="mb-3">
           <label class="form-label">Nombre</label>
           <input name="nombre" type="text" class="form-control" placeholder="Nombre" required>

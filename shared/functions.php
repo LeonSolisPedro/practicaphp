@@ -5,15 +5,31 @@
 function obtenerProductos()
 {
     $bd = obtenerConexion();
-    $sentencia = $bd->query("SELECT id, nombre, descripcion, precio FROM productos");
+    $sentencia = $bd->query("SELECT id, portadaURL,nombre, descripcion, precio FROM productos");
     return $sentencia->fetchAll();
 }
 
-function guardarProducto($nombre, $descripcion ,$precio)
+function obtenerProducto($id)
 {
     $bd = obtenerConexion();
-    $sentencia = $bd->prepare("INSERT INTO productos(nombre, descripcion, precio) VALUES(?, ?, ?)");
-    return $sentencia->execute([$nombre, $descripcion, $precio]);
+    $sentencia = $bd->prepare("SELECT id, portadaURL ,nombre, descripcion, precio FROM productos WHERE id =?");
+    $sentencia->execute([$id]);
+    return $sentencia->fetch();
+}
+
+function guardarProducto($portadaURL, $nombre, $descripcion ,$precio)
+{
+    $bd = obtenerConexion();
+    $sentencia = $bd->prepare("INSERT INTO productos(portadaURL,nombre, descripcion, precio) VALUES(?,?,?, ?)");
+    return $sentencia->execute([$portadaURL,$nombre, $descripcion, $precio]);
+}
+
+
+function editarProducto($portadaURL,$id, $nombre, $descripcion, $precio)
+{
+    $bd = obtenerConexion();
+    $sentencia = $bd->prepare("UPDATE productos SET portadaURL=?,nombre=?, descripcion=?, precio=? WHERE id=?");
+    return $sentencia->execute([$portadaURL,$nombre, $descripcion, $precio, $id]);
 }
 
 function eliminarProducto($id)
