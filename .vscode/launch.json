@@ -5,10 +5,13 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Listen for Xdebug",
+      "name": "Listen for Xdebug on Docker",
       "type": "php",
       "request": "launch",
-      "port": 9003
-    }
+      "port": 9003,
+      "pathMappings": {
+        "/opt/lampp/htdocs/": "${workspaceFolder}"
+      }
+    },
   ]
 }
